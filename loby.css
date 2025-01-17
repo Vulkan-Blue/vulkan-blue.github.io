@@ -2,6 +2,12 @@
 body{
   background-color: #00eeff62;
 }
+.titulo1{
+color: #0077ff;
+
+
+}
+
 .pag {
     position: relative;
     width: 100%;
@@ -10,7 +16,12 @@ body{
     justify-content: center;
     align-items: center;
   }
-  
+  .efectovisual { opacity: 0; transition: opacity 2s ease-in-out; } 
+  .efectovisual.mostrar { opacity: 1;}
+
+
+
+
   .pag a {
     position: absolute; /* Posición absoluta para controlar la ubicación */
     display: flex;
@@ -25,7 +36,13 @@ body{
     text-align: center;
     transition: top 1s ease, left 1s ease; /* Transición suave */
   }
-  
+  .efectovisual{
+
+    a { color: #0000FF;
+       text-decoration: none; transition: color 0.5s ease, transform 0.5s ease; } 
+    a:hover { color: #FF0000;
+       transform: scale(1.1);
+  }}
   /* Asignando colores claros diferentes para cada botón */
   .pag a:nth-child(1) { background-color: #ff0026; } /* Botón rosa claro */
   .pag a:nth-child(2) { background-color: #9008ff; } /* Botón azul claro */
@@ -61,4 +78,9 @@ body{
       height: 70px;
     }
   }
-  
+  a:active { 
+    transform: scale(1.1);
+   }
+   a:hover{ 
+    transform: scale(1.1);
+   } 

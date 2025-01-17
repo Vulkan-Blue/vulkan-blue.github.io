@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> VULKAN BLUE</title>
+  <title>VULKAN BLUE</title>
   <link rel="icon" href="logo.png" type="image/x-icon" >
   <link rel="stylesheet" href="general.css">s
   <link rel="stylesheet" href="loby.css">
+
+
+  
 </head>
 
 <body>
@@ -17,13 +20,14 @@
 
 
 <!-- este primer enlace de imagen es el perfil de las personas debera tener una forma redonda -->
-     <a href="" id="boton"><img src="logo.png" alt="" height="30px" width="30px"></a>
+     <a href="" ><img src="logo.png" class="efectovisual" id="miImagen" alt="" height="60px" width="60px"></a>
 
 
-  <h1>VULKAN BLUE</h1>
+  <h1 class="titulo1"></h1>
+
   <a href="webs.html"                   id="boton1" class=" ">CREAR WEB</a>
   <a href="picblue.html"                id="boton2" class=" ">IR A PICBLUE</a>
-  <a href=""                            id="boton3" class="c">VulkanStore</a>
+  <a href="VulkanBstore.html"                            id="boton3" class="c">VulkanStore</a>
   <a href="mensajes.html"               id="boton4" class=" ">para mensajear</a>
   <a href="creación_de_textos.html"     id="boton5" class=" ">HTML Sector</a>
   <a href="creación_de_estilos_css.html" id="boton6" class=" ">CSS Sector</a>
@@ -190,6 +194,11 @@
 
 
    </script>
-            
+        <script>
+         window.addEventListener('load', function () { 
+          var imagen = document.getElementById('miImagen'); 
+        imagen.classList.add('mostrar');
+         });
+          </script>    
 </body>
 </html>

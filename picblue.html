@@ -1,46 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PicVB</title>
-    <link rel="icon" href="logo.png" type="image/x-icon" >
-    <link rel="stylesheet" href="picblue.css">
-    <link rel="stylesheet" href="general.css">
+    <title>PicBLUE</title>
+    <style>
+        body {
+          background-color: rgb(34, 71, 63);
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+
+        header span {
+            color: blue;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: calc(33% - 20px);
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+            background-color: white;
+        }
+
+        .card img {
+            width: 100%;
+        }
+
+        .card-description {
+            padding: 15px;
+            font-size: 0.9em;
+        }
+
+        .card button {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .card button:hover {
+            background-color: darkblue;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                width: calc(33.33% - 20px);
+            }
+
+            .card-description {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+      <link rel="icon" href="logo.png" type="image/x-icon" >
 </head>
 <body>
-    <div id="iniciarSecc">
-   <h2> Inicio de sección </h2>
-     <p>Usuario</p>
-    <textarea name="" id="Usuario"></textarea>
-   
-     <p>Contraseña</p>
-     <textarea name="" id="Contrasena"></textarea>
-     <button onclick="AcederPic()">entrar</button>
-     <a href="crearUsuario.html">Crear Usuario</a>
+    <header>
+        PIC<span style="color: blue;">BLUE</span>
+    </header>
+    
+    <div class="container">
+        <div class="card">
+            <img src="picBlueImg/sprite.png.webp" alt="Imagen 1">
+            <div class="card-description">
+              <p>Sprite editable perfecto para usar de molde para videojuegos</p>
+                <p>Caminar: Secuencia fluida que simula pasos naturales.</p>
+                <p>Saltar: Movimiento de ascenso y descenso.
+                </p>
+                <p>Volar: Postura suspendida en el aire con movimientos ligeros.</p>
+                <p>Atacar: Golpe genérico.</p>
+                <p>Caer: Postura de descenso hacia el suelo.</p>
+                <p>Morir: Animación de colapso.</p>
+                <p>Nadar: Brazadas y movimientos corporales en el agua.</p>
+                <p>Atacar con pistola: Movimiento del brazo con disparo.</p>
+                <p>Atacar con espada: Golpe con movimiento amplio.</p>
+                <p>Defensa: Postura de bloqueo o cobertura.</p>
+               
+
+
+
+
+
+
+
+            </div>
+            <button>Comprar</button>
+        </div>
+
+
+        <div class="card">
+            <img src="picBlueImg/un satélite enviando zondas de comunicación al espacio.png" alt="Imagen 2">
+            <div class="card-description">
+              <p>Satélite: El satélite es un dispositivo de alta tecnología con paneles solares extendidos en ambos lados para captar energía del sol. Los paneles son de un azul oscuro, con una superficie texturizada que refleja la luz solar. El cuerpo principal del satélite es cilíndrico, con varias antenas y dispositivos de comunicación sobresaliendo.</p>  
+              <p>Antenas: Las antenas están desplegadas en diferentes direcciones, emitiendo ondas de comunicación hacia el espacio. Las ondas están representadas por líneas onduladas que se alejan del satélite, simbolizando la transmisión de datos hacia diversos puntos del cosmos.</p>
+              <p>Fondo: El fondo muestra la vastedad del espacio, con estrellas brillantes en la distancia. La Tierra es visible en el borde inferior de la imagen, destacando la perspectiva desde el espacio.</p>
+              <p>Luces y efectos: La imagen incluye efectos de luz que destacan el satélite, con reflejos suaves en los paneles solares y el cuerpo del dispositivo. Las ondas de comunicación también tienen un brillo sutil, haciendo que la transmisión se vea activa y dinámica.</p>
+
+
+
+            </div>
+            <button>Comprar</button>
+        </div>
+
+
+        <div class="card">
+            <img src="picBlueImg/Batman.png" alt="Imagen 3">
+            <div class="card-description">
+              <p>Fondo: La imagen muestra una vista nocturna de Gotham City, con altos rascacielos y una luna llena brillando en el cielo oscuro. Las luces de los edificios están encendidas, reflejando la actividad nocturna de la ciudad.
+              </p>
+              <p>Batman: En el centro de la imagen se encuentra Batman, vestido con su icónico traje negro. Su capa se extiende dramáticamente detrás de él, agitándose ligeramente como si el viento la moviera. Lleva su máscara negra con orejas puntiagudas, cubriendo su rostro y dejando al descubierto solo su mandíbula y boca.
+            </p>  <p>Postura: Batman está en una posición heroica, de pie en la cornisa de un edificio alto, observando la ciudad con una expresión decidida. Una de sus manos está en su cinturón de herramientas, y la otra está lista, con un Batarang visible, simbolizando su preparación para cualquier amenaza.
+            </p>
+              <p>Detalle del traje: El traje de Batman está lleno de detalles: se pueden ver las texturas del material reforzado, las placas de armadura y el emblema del murciélago en su pecho. Su cinturón de herramientas está lleno de artilugios y dispositivos, listos para ser usados en combate.
+              </p>
+              <p>Iluminación: La iluminación en la imagen resalta a Batman, con una luz suave que lo ilumina desde un lado, creando sombras que acentúan su musculatura y la textura de su traje. La luna llena proporciona una luz de fondo, dándole un toque aún más dramático.
+              </p>
+              
+               </div>
+            <button>Comprar</button>
+        </div>
+        <!-- Agrega más tarjetas aquí -->
     </div>
-
-
-
-     <div id="Pagina" class="pag">
-     
-
-      <div class="flex">
-     <h1>Pic</h1><h1 class="azul">VB</h1>
-    </div>  
-
-     
- 
-       <img src="img/esquema.png" alt="">
-
-
-
-     </div>
-
-
-
-<script src="acceso.js"></script>
-
-
 </body>
 </html>
