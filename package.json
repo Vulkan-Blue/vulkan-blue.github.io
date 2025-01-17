@@ -1,0 +1,19 @@
+{
+  "name": "vulkan-blue",
+  "version": "1.0.0",
+  "main": "ia.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.22.0",
+    "anime": "^0.1.2",
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
+    "mysql": "^2.18.1",
+    "pouchdb": "^9.0.0"
+  },
+  "description": ""
+}

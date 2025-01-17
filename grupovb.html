@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>GURPO</h1>
+  <h2>  OBJETIVOS:  </h2>
+     
+
+    <div class="escribir">
+   <textarea name="test" id="miTextarea" rows="5%" cols="30%"></textarea>
+</div>
+<button class="enviar" onclick="enviar()">Enviar</button>
+<div id="contenedor"></div>
+
+<script>
+// Función para cargar los párrafos guardados en localStorage al iniciar
+window.onload = function() {
+    var savedParagraphs = JSON.parse(localStorage.getItem('paragraphs')) || [];
+    var contenedor = document.getElementById('contenedor');
+    savedParagraphs.forEach(function(text) {
+        var nuevoParrafo = document.createElement('p');
+        nuevoParrafo.textContent = text;
+        contenedor.appendChild(nuevoParrafo);
+    });
+}
+
+// Función para crear un nuevo párrafo y guardarlo en localStorage
+function enviar() {
+    // Obtener el valor del textarea
+    var texto = document.getElementById('miTextarea').value;
+    
+    // Crear un nuevo elemento <p>
+    var nuevoParrafo = document.createElement('p');
+    
+    // Asignar el texto al nuevo párrafo
+    nuevoParrafo.textContent = texto;
+    
+    // Añadir el nuevo párrafo al contenedor en el DOM
+    var contenedor = document.getElementById('contenedor');
+    contenedor.appendChild(nuevoParrafo);
+    
+    // Guardar el nuevo párrafo en localStorage
+    var savedParagraphs = JSON.parse(localStorage.getItem('paragraphs')) || [];
+    savedParagraphs.push(texto);
+    localStorage.setItem('paragraphs', JSON.stringify(savedParagraphs));
+
+
+    
+}
+
+
+
+
+
+</script>
+</body>
+</html>

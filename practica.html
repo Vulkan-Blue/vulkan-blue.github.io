@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear botones y áreas de texto dinámicamente</title>
+    <style>
+        .boton-posicionable {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crear botones y áreas de texto</h1>
+    <input type="file" id="archivo" accept=".html">
+    <div id="contenido"></div>
+    <button id="botonCrear">Crear Botón</button>
+
+    <script>
+        document.getElementById('archivo').addEventListener('change', function() {
+            const archivo = this.files[0];
+            if (archivo) {
+                const lector = new FileReader();
+                lector.onload = function(e) {
+                    document.getElementById('contenido').innerHTML = e.target.result;
+                };
+                lector.readAsText(archivo);
+            }
+        });
+
+        document.getElementById('botonCrear').addEventListener('click', function() {
+            const nuevoBoton = document.createElement('button');
+            nuevoBoton.textContent = 'Nuevo Botón';
+            nuevoBoton.className = 'boton-posicionable';
+            nuevoBoton.onclick = function() {
+                const nuevaTextarea = document.createElement('textarea');
+                nuevaTextarea.placeholder = 'Escribe aquí...';
+                document.getElementById('contenido').appendChild(nuevaTextarea);
+            };
+            document.getElementById('contenido').appendChild(nuevoBoton);
+
+            // Ajustar posición con JavaScript
+            nuevoBoton.style.top = 300 + 'px' ; // Posición aleatoria en el eje Y
+            nuevoBoton.style.left = Math.random() * 300 + 'px'; // Posición aleatoria en el eje X
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+/* Añadido a tu archivo general.css o loby.css */
+body{
+  background-color: #00eeff62;
+}
+.pag {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pag a {
+    position: absolute; /* Posición absoluta para controlar la ubicación */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px; /* Tamaño del botón */
+    height: 100px; /* Tamaño del botón */
+    border-radius: 20px; /* Esquinas medio redondeadas */
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    text-align: center;
+    transition: top 1s ease, left 1s ease; /* Transición suave */
+  }
+  
+  /* Asignando colores claros diferentes para cada botón */
+  .pag a:nth-child(1) { background-color: #ff0026; } /* Botón rosa claro */
+  .pag a:nth-child(2) { background-color: #9008ff; } /* Botón azul claro */
+  .pag a:nth-child(3) { background-color: #00f000; } /* Botón verde claro */
+  .pag a:nth-child(4) { background-color: #FFD700; } /* Botón amarillo */
+  .pag a:nth-child(5) { background-color: #ff0037; } /* Botón rosa brillante */
+  .pag a:nth-child(6) { background-color: #009dff; } /* Botón azul cielo */
+  .pag a:nth-child(7) { background-color: #9008ff; } /* Botón azul pálido */
+  .pag a:nth-child(8) { background-color: #ff00f7; } /* Botón orquídea */
+  .pag a:nth-child(9) { background-color: #f56200; } /* Botón salmón */
+  .pag a:nth-child(10) { background-color: #ff4800; } /* Botón salmón claro */
+  .pag a:nth-child(11) { background-color: #0000fa; } /* Botón lavanda */
+  .pag a:nth-child(12) { background-color: #D3D3D3; } /* Botón gris claro */
+  
+  /* Calculando la posición de cada botón para formar un círculo */
+  .pag a:nth-child(1) { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(0px, 0px); }
+  .pag a:nth-child(2) { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(129px, -75px); }
+  .pag a:nth-child(3) { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(129px, 75px); }
+  .pag a:nth-child(4) { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(129px, -75px); }
+  .pag a:nth-child(5) { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(-129px, 75px); }
+  .pag a:nth-child(6) { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(-129px, -75px); }
+  .pag a:nth-child(7) { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(75px, -129px); }
+  .pag a:nth-child(8) { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(75px, 129px); }
+  .pag a:nth-child(9) { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(-75px, 129px); }
+  .pag a:nth-child(10) { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(-75px, -129px); }
+  .pag a:nth-child(11) { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(0, -175px); }
+  .pag a:nth-child(12) { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(0, 175px); }
+  
+  /* CSS para diseño responsivo */
+  @media (max-width: 600px) {
+    .pag a {
+      width: 70px; /* Tamaño del botón reducido para móviles */
+      height: 70px;
+    }
+  }
+  

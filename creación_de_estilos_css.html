@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear botones y áreas de texto dinámicamente</title>
+    <link rel="icon" href="logo.png" type="image/x-icon" >
+    <style>
+        .boton-posicionable {
+            position: absolute;
+          
+        }
+        .text-altura{
+            position: absolute;
+            left: 500px;
+            top: 0px;
+        }
+        .text-lateral{
+            position: absolute;
+            left: 500px;
+            top: 40px
+        }
+        .boton-aceptar{
+            position: absolute;
+            left: 700px;
+            top: 0px
+        }
+       .text-radio{
+            position: absolute;
+            left: 500px;
+            top: 80px
+        }
+        .text-bordes{
+            position: absolute;
+            left: 500px;
+            top: 120px
+        }
+        .text-tamaño{
+            position: absolute;
+            left: 500px;
+            top: 160px
+        }
+        .text-alto{
+            position: absolute;
+            left: 500px;
+            top: 160px
+        }
+        .text-ancho{
+            position: absolute;
+            left: 500px;
+            top: 200px
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Crear botones y áreas de texto</h1>
+    <input type="file" id="archivo" accept=".html">
+    <div id="contenido"></div>
+    <button id="botonCrear">Crear Botón</button>
+
+    <script>
+        document.getElementById('archivo').addEventListener('change', function() {
+            const archivo = this.files[0];
+            if (archivo) {
+                const lector = new FileReader();
+                lector.onload = function(e) {
+                    document.getElementById('contenido').innerHTML = e.target.result;
+                };
+                lector.readAsText(archivo);
+            }
+        });
+
+        document.getElementById('botonCrear').addEventListener('click', function() {
+            var nuevoBoton = document.createElement('button');
+            nuevoBoton.className = 'boton-posicionable';
+            nuevoBoton.textContent = 'Nuevo Botón';
+            
+            nuevoBoton.onclick = function() {
+                //altura
+                var TextareaAltura = document.createElement('textarea');
+                TextareaAltura.className = 'text-altura';
+                TextareaAltura.id = "identificadorDeTextAreaAltura" ;
+                TextareaAltura.placeholder = 'Y';
+                document.getElementById('contenido').appendChild(TextareaAltura);
+            //lateral
+            var TextareaLateral = document.createElement('textarea');
+            TextareaLateral.className = 'text-lateral';
+                TextareaLateral.id = "identificadorDeTextAreaLateral" ;
+                TextareaLateral.placeholder = 'X';
+                document.getElementById('contenido').appendChild(TextareaLateral);
+            //Radio
+            var Textarearadio = document.createElement('textarea');
+            Textarearadio.className = 'text-radio';
+            Textarearadio.id = "identificadorDeradio" ;
+            Textarearadio.placeholder = 'radio';
+                document.getElementById('contenido').appendChild(Textarearadio);
+            //tamaño de bordes
+            var TextareaBordes = document.createElement('textarea');
+            TextareaBordes.className = 'text-bordes';
+            TextareaBordes.id = "identificadorDebordes" ;
+            TextareaBordes.placeholder = 'Bordes';
+                document.getElementById('contenido').appendChild(TextareaBordes);
+                 
+                //altura del boton
+                var Textareaalto = document.createElement('textarea');
+                Textareaalto.className = 'text-alto';
+                Textareaalto.id = "identificadorDealto" ;
+                Textareaalto.placeholder = 'alto del boton';
+                document.getElementById('contenido').appendChild(Textareaalto);
+
+            //ancho del boton
+            var Textareaancho = document.createElement('textarea');
+            Textareaancho.className = 'text-ancho';
+            Textareaancho.id = "identificadorDeancho" ;
+            Textareaancho.placeholder = 'ancho del boton';
+                document.getElementById('contenido').appendChild(Textareaancho);
+
+
+
+
+
+
+               //Boton aceptar 
+            var aceptar = document.createElement('button');
+            aceptar.className = 'boton-aceptar';
+            aceptar.id = 'aceparci';
+            
+            aceptar.textContent = 'aceptar';
+
+            aceptar.onclick = function(){
+                //Corregir altura
+                var idtextAltura = document.getElementById('identificadorDeTextAreaAltura').value;
+                var funA = document.createElement('p');
+                funA.textContent = "Y" + idtextAltura;
+                document.getElementById('contenido').appendChild(funA);
+
+            //laterales
+            var idtexLateral = document.getElementById('identificadorDeTextAreaLateral').value;
+                var funL = document.createElement('p');
+                funL.textContent = "X" + idtexLateral;
+                document.getElementById('contenido').appendChild(funL);
+
+
+                //llamadas 
+                //radio
+                var radio = document.getElementById('identificadorDeradio').value;
+                var func = document.createElement('p');
+                func.textContent = "radio" + radio;
+                
+                //borde
+                var bordes = document.getElementById('identificadorDebordes').value;
+                var funb = document.createElement('p');
+                funb.textContent = "bordes" + radio;
+
+                //alto
+                var altura = document.getElementById('identificadorDealto').value;
+                var funal = document.createElement('p');
+                funal.textContent = "bordes" + radio;
+
+                //ancho
+                var anchor = document.getElementById('identificadorDeancho').value;
+                var funan = document.createElement('p');
+                funan.textContent = "bordes" + radio;
+
+
+                //posicion del botón
+                nuevoBoton.style.top = idtextAltura + 'px' ; // Posición aleatoria en el eje Y
+            nuevoBoton.style.left = idtexLateral  + 'px'; // Posición aleatoria en el eje X
+            nuevoBoton.style.borderRadius = radio + 'px'; // Puedes cambiar el valor a tu
+            nuevoBoton.style.borderWidth = bordes + 'px'; // Ajusta el ancho del borde a 5 píxeles
+            nuevoBoton.style.width = anchor + 'px'; 
+            nuevoBoton.style.height = altura + 'px';
+        
+
+
+            }
+            document.getElementById('contenido').appendChild(aceptar);
+            
+                   
+
+
+
+
+
+            };
+            document.getElementById('contenido').appendChild(nuevoBoton);
+           
+
+        });
+
+        
+      
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+
+.escribir{
+background-color: aqua;
+display: flex;
+position: absolute;
+top: 60%;
+}
+.enviar{
+    display: flex;
+    position: absolute;
+    top: 57.9%;
+   left: 8px;
+}

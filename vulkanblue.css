@@ -1,0 +1,141 @@
+h2{color: rgb(0, 204, 255);
+}
+p.cr{color: blue;}
+div.lin{
+ text-align: center;
+}
+a.qs{
+ color: white;
+ background-color:  black;
+padding: 0%;
+
+display: inline-block;
+margin: 50px;
+}
+a.dds{
+ color: white;
+ background-color: black;
+ padding: 0%;
+
+display: inline-block;
+margin: 0%;  
+}
+a.hp{
+ 
+ color: white;
+ background-color:black;
+ padding: 0%;
+
+display: inline-block;
+margin: 0%; 
+}
+a.QOT{
+  color: white;
+  background-color:black;
+  padding: 0%;
+ 
+ display: inline-block;
+ margin: 50px; 
+
+}
+a.objetivo{
+
+  color: white;
+  background-color:black;
+  padding: 0%;
+ 
+ display: inline-block;
+ margin: 50px;  
+}
+h2{
+text-align: center;
+}
+
+/* letra:*/ 
+div.container {
+max-width: 2000px; /* Ancho máximo del contenedor */
+margin: 0 auto;  /* Centra el contenedor horizontalmente */
+}
+/*zona de ejemplo de creación*/
+.imagen {
+float: left;  /* Flota la imagen a la izquierda */
+margin-right: 10px;  /* Espacio entre la imagen y el texto */
+width: 400px;  /* Ancho de la imagen */
+}
+
+.texto {
+font-size: 16px;  /* Tamaño de la fuente del texto */
+line-height: 1.5;  /* Altura de línea para mejor legibilidad */
+}
+
+
+/*edición de ir a*/
+h2.aaa{background-color:black;}
+nav{
+background-color:black ; 
+height: 100%;
+
+}
+img {
+    max-width: 100%;
+    height: auto;
+  }
+ body{
+ background-image: url('/img/fondo-web.png');
+  background-size: cover;  
+   background-repeat: no-repeat; 
+    background-position: center;
+ 
+ }
+
+
+
+body.pol{
+  text-align: center;
+}
+a.politicoa{
+  background-color: blue;
+  color: white;
+  display: inline-block;
+  margin: 0%;
+
+}
+
+
+a.iaa{
+  img{
+  
+      position: fixed;
+      left: 1200px;
+      height: 120px;
+      top: 700px;
+      border-radius: 100%;
+      }
+  }
+  .left-aligned { 
+    text-align: left; padding: 10px;
+   
+      /* Opcional: agregar un borde para visualizar mejor el contenedor */ 
+      padding: 10px;
+      margin-bottom: 0px;
+      margin: 10px;
+    }
+    .linea-1{
+      color: aliceblue;
+      margin-bottom: -30px;
+    }
+    .linea-2{
+      color: aliceblue;
+      margin-bottom: -29px;
+    }
+    .linea-3{
+      color: aliceblue;
+      margin-bottom: -500px;
+    
+    }
+    
+@media (min-width: 768px){
+body{
+  background-color: aqua;
+}
+}
